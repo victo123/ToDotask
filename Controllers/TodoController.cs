@@ -21,10 +21,10 @@ namespace TodoApi.Controllers
 
             if (_context.TodoItems.Count() == 0)
             {
-                _context.TodoItems.Add(new TodoItem { Title = "Item1", Description = "Description 1", Expiry = DateTime.Now });
-                _context.TodoItems.Add(new TodoItem { Title = "Item2", Description = "Description 2", Expiry = DateTime.Now.AddDays(1) });
-                _context.TodoItems.Add(new TodoItem { Title = "Item3", Description = "Description 3", Expiry = DateTime.Now.AddDays(2) });
-                _context.TodoItems.Add(new TodoItem { Title = "Item4", Description = "Description 4", Expiry = DateTime.Now.AddDays(7) });
+                _context.TodoItems.Add(new TodoItem { Id = 1,  Title = "Item1", Description = "Description 1", Expiry = DateTime.Now });
+                _context.TodoItems.Add(new TodoItem { Id = 2,  Title = "Item2", Description = "Description 2", Expiry = DateTime.Now.AddDays(1) });
+                _context.TodoItems.Add(new TodoItem { Id = 3,  Title = "Item3", Description = "Description 3", Expiry = DateTime.Now.AddDays(2) });
+                _context.TodoItems.Add(new TodoItem { Id = 4,  Title = "Item4", Description = "Description 4", Expiry = DateTime.Now.AddDays(7) });
                 _context.SaveChanges();
             }
         }
